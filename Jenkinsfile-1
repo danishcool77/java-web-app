@@ -5,12 +5,14 @@ pipeline {
   }
   stages {
   
-  	options
+
+			
+    stage('Scan') {
+	
+	options
 			{
 			  timeout(time: 1, unit: 'HOURS')
 			}
-			
-    stage('Scan') {
       steps {
         withSonarQubeEnv(installationName: 'sq1') { 
          sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
