@@ -19,7 +19,8 @@ pipeline {
   }
 	
 		      steps {
-		      sh "java -version"
+		       bat label: 'DANISH_MACHINE', script: "java -version"
+		 
        echo "Hello ${NAME}"
      //  echo "credentails  ${AAA_SECRET_TEXT}"
        echo "Branch ${env.GIT_BRANCH}"
