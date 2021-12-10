@@ -14,9 +14,8 @@ pipeline {
 			  timeout(time: 1, unit: 'HOURS')
 			}
       steps {
-        cmd = "java -version"
-	bat cmd
-        }
+        sh 'java -version'
+	        }
       }
     }
     
