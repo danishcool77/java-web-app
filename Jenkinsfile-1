@@ -33,11 +33,9 @@ gv = load "script.groovy"
   }
 	
 		      steps {
-		      cmd = "mvn spring-boot:run";
-		       script {
-		       
-		       bat cmd
-		       }
+		    
+		       bat label: '', script: 'mvn spring-boot:run'    
+		      
 		       
 		       
 		     
