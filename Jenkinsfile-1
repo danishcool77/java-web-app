@@ -19,6 +19,7 @@ pipeline {
   }
 	
 		      steps {
+		      sh "java -version"
        echo "Hello ${NAME}"
        echo "credentails  ${AAA_SECRET_TEXT}"
        echo "Branch ${env.GIT_BRANCH}"
@@ -26,7 +27,7 @@ pipeline {
       }
       
           stage('Scan2') {
-	  
+	  //Stage "Scan2" skipped due to when conditional
 	  when{
 	  expression
 	  {
