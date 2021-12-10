@@ -4,6 +4,10 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   
+  parameters
+  {
+  booleanParam (name:'executeTests', defaultValue: true, description: 'running test')
+  }
  
   stages {
   
@@ -42,6 +46,23 @@ pipeline {
        echo "Branch ${env.GIT_BRANCH}"
 	        }
       }
+      
+        stage('Test') {
+	  //Stage "Scan2" skipped due to when conditional
+	  when{
+	  expression
+	  {
+	  params.executeTests == true
+	  }
+	  }
+	
+		      steps {
+    
+       echo "running tests"
+      
+	        }
+      }
+      
       
     }
     
