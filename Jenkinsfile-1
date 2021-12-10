@@ -20,8 +20,9 @@ pipeline {
 			  timeout(time: 1, unit: 'HOURS')
 			}
       steps {
-       echo 'Hello ${NAME}'
+       echo "Hello ${NAME}"
        echo "workspace ${WORKSPACE}"
+       echo "Branch ${env.GIT_BRANCH}"
 	        }
       }
     }
