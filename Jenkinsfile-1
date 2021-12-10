@@ -3,6 +3,12 @@ pipeline {
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
+  
+  environment
+  {
+  
+  NAME = "danish"
+  }
   stages {
   
 
@@ -15,7 +21,7 @@ pipeline {
 			}
       steps {
        echo 'Hello'
-       echo "${env.BRANCH_NAME}"
+       echo "${NAME}"
 	        }
       }
     }
