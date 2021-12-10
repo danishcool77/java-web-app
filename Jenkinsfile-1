@@ -4,27 +4,35 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   
-  environment
-  {
-  
-  NAME = "danish"
-  }
+ 
   stages {
   
 
 			
-    stage('Scan') {
+    stage('Scan1') {
+    
+     environment
+  {
+  
+  NAME = "danish"
+  }
 	
-			options
-			{
-			  timeout(time: 1, unit: 'HOURS')
-			}
-      steps {
+		      steps {
        echo "Hello ${NAME}"
        echo "workspace ${WORKSPACE}"
        echo "Branch ${env.GIT_BRANCH}"
 	        }
       }
+      
+          stage('Scan2') {
+	
+		      steps {
+       echo "Hello ${NAME}"
+       echo "workspace ${WORKSPACE}"
+       echo "Branch ${env.GIT_BRANCH}"
+	        }
+      }
+      
     }
     
         }
