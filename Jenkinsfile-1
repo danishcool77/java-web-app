@@ -15,11 +15,12 @@ pipeline {
   {
   
   NAME = "danish"
+   AAA_SECRET_TEXT = credentials('GIT_REPO_')
   }
 	
 		      steps {
        echo "Hello ${NAME}"
-       echo "workspace ${WORKSPACE}"
+       echo "credentails  ${AAA_SECRET_TEXT}"
        echo "Branch ${env.GIT_BRANCH}"
 	        }
       }
