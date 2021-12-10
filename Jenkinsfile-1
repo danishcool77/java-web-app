@@ -15,7 +15,7 @@ pipeline {
 			}
       steps {
        echo 'Hello'
-       "Branch is ${BRANCH_NAME}"
+       echo "Branch is ${BRANCH_NAME}"
 	        }
       }
     }
