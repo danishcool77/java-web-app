@@ -20,8 +20,8 @@ pipeline {
 			  timeout(time: 1, unit: 'HOURS')
 			}
       steps {
-       echo 'Hello'
-       echo BRANCH_NAME
+       echo 'Hello ${NAME}'
+       echo "workspace ${WORKSPACE}"
 	        }
       }
     }
