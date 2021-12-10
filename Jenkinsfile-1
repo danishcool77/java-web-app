@@ -14,7 +14,8 @@ pipeline {
 			  timeout(time: 1, unit: 'HOURS')
 			}
       steps {
-        sh 'java -version'
+       echo 'Hello'
+       "Branch is ${BRANCH_NAME}"
 	        }
       }
     }
