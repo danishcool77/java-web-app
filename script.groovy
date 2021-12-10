@@ -1,6 +1,6 @@
 def runApp()
 {
-"mvn spring-boot:run"
+mvn package
 }
 
 return this
