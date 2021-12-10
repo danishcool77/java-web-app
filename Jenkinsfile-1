@@ -14,7 +14,7 @@ pipeline {
   
 stage('init') {
 
-step
+steps
 {
 
 script
