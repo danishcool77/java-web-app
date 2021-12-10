@@ -33,7 +33,8 @@ gv = load "script.groovy"
   }
 	
 		      steps {
-		       script : gv.runApp()
+		      call = gv.runApp()
+		       script : call
 		     
 		 
      //  echo "Hello ${NAME}"
