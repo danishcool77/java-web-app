@@ -14,7 +14,7 @@ pipeline {
 			  timeout(time: 1, unit: 'HOURS')
 			}
       steps {
-       java -version
+        echo 'Hello'
         }
       }
     }
