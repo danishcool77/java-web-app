@@ -33,8 +33,10 @@ gv = load "script.groovy"
   }
 	
 		      steps {
-		      call = gv.runApp()
-		       script : call
+		     
+		       script : mvn spring-boot:run 
+		       
+		       
 		     
 		 
      //  echo "Hello ${NAME}"
@@ -70,7 +72,9 @@ gv = load "script.groovy"
 	
 		      steps {
     
-       echo "running tests"
+       script{
+       gv.runApp()
+       }
       
 	        }
       }
