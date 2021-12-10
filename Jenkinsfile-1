@@ -1,3 +1,4 @@
+def gv
 pipeline {
   agent { label 'DANISH_MACHINE' }
   options {
@@ -11,7 +12,16 @@ pipeline {
  
   stages {
   
+stage('init') {
 
+step
+{
+
+script
+{
+gv = load "script.groovy"
+}}
+}
 			
     stage('Scan1') {
     
@@ -23,7 +33,9 @@ pipeline {
   }
 	
 		      steps {
-		       bat label: 'DANISH_MACHINE', script: "mvn package"
+		       script {
+		      gv.runApp()
+		       }
 		 
      //  echo "Hello ${NAME}"
      //  echo "credentails  ${AAA_SECRET_TEXT}"
