@@ -19,11 +19,11 @@ pipeline {
   }
 	
 		      steps {
-		       bat label: 'DANISH_MACHINE', script: "java -version"
+		       bat label: 'DANISH_MACHINE', script: "mvn package"
 		 
-       echo "Hello ${NAME}"
+     //  echo "Hello ${NAME}"
      //  echo "credentails  ${AAA_SECRET_TEXT}"
-       echo "Branch ${env.GIT_BRANCH}"
+      // echo "Branch ${env.GIT_BRANCH}"
 	        }
       }
       
