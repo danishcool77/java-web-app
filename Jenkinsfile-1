@@ -15,13 +15,13 @@ pipeline {
   {
   
   NAME = "danish"
-   AAA_SECRET_TEXT = credentials('GIT_REPO_')
+   //AAA_SECRET_TEXT = credentials('GIT_REPO_')
   }
 	
 		      steps {
 		      sh "java -version"
        echo "Hello ${NAME}"
-       echo "credentails  ${AAA_SECRET_TEXT}"
+     //  echo "credentails  ${AAA_SECRET_TEXT}"
        echo "Branch ${env.GIT_BRANCH}"
 	        }
       }
